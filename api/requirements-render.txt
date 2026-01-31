@@ -1,0 +1,28 @@
+# --- 1. RENDER FIXES (Crucial) ---
+# Fixes the "cython_sources" crash on Python 3.13
+PyYAML>=6.0.1
+# Forces CPU-only PyTorch (Saves 3GB)
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# --- 2. Core Dependencies ---
+# Explicitly pin CPU version of torch to avoid downloading nvidia-gpu libs
+torch==2.5.1+cpu
+sentence-transformers==3.3.1
+Flask
+flask-cors
+gunicorn
+requests
+python-dotenv
+beautifulsoup4
+
+# --- 3. AI Framework ---
+langchain==0.3.0
+langchain-core==0.3.63
+langchain-community==0.4.1
+langchain-chroma==0.2.4
+chromadb==1.4.1
+langchain-groq==0.3.2
+langchain-huggingface==0.2.0
+pydantic==2.12.5
+tenacity==8.5.0
+packaging==24.2
