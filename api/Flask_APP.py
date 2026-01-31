@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 from RAG_Functions import query_answer_generation 
+import gunicorn
 
 load_dotenv() # This loads the .env file!
 
