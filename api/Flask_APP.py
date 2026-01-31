@@ -21,7 +21,7 @@ def home():
     return "Nagrik API is Runnig"
 
 
-@app.route('/api/Flask_APP/chat', methods = ['POST'])
+@app.route('/chat', methods = ['POST'])
 def query():
     if request.method == 'GET':
         return 'Nagrik API is Running'
