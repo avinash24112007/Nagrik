@@ -1,16 +1,17 @@
-import requests
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage
-import pandas as pd
-import streamlit as st # Optional, for types or if used directly
 
 def Consolidated_Embedder(Base_url, log_container=None, progress_bar=None):
+    import requests
+    from bs4 import BeautifulSoup
+    from urllib.parse import urljoin
+    import pandas as pd
+    import streamlit as st # Optional, for types or if used directly
+
     class DummyContainer:
         def write(self, *args, **kwargs): pass
     class DummyProgressBar:
