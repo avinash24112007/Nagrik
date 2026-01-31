@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 import os
-from RAG_Functions import query_answer_generation 
 import gunicorn
 
 load_dotenv() # This loads the .env file!
@@ -23,6 +22,9 @@ def home():
 
 @app.route('/chat', methods = ['POST'])
 def query():
+    # Lazy import to speed up server startup
+    from RAG_Functions import query_answer_generation
+    
     if request.method == 'GET':
         return 'Nagrik API is Running'
     try:
