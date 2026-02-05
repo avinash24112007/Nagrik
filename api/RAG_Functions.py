@@ -84,12 +84,12 @@ def Consolidated_Embedder(Base_url, log_container=None, progress_bar=None):
 
                 for link in links:
                     link_text = link.get_text(strip=True)
-                    link_url = link.get('href')
+                    link_url = link.get('href')         
 
                     if link_url.startswith('/'):
                         full_link = urljoin(url,link_url)
-                        if full_link not in visited_urls and full_link not in to_visit_queue:
-                            to_visit_queue.append(full_link)
+                    if full_link not in visited_urls and full_link not in to_visit_queue:
+                        to_visit_queue.append(full_link)
                 log_container.write(f"Total sub-links discovered {len(to_visit_queue)} ...")
                 total_estimated_pages = len(to_visit_queue) 
                 

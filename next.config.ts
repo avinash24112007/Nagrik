@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/Flask_APP/:path*',
-        destination: 'https://nagrik.onrender.com/:path*',
+        destination: 'https://avinash159-159-nagrik-backend.hf.space/:path*',
       },
     ];
   },
